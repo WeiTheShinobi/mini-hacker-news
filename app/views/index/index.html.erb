@@ -1,1 +1,20 @@
-<h1>hello</h1>
+<a href="/signup">註冊/登入</a>
+
+
+<h1>All Articles</h1>
+
+<ul>
+  <% if @articles.present? %>
+    <% @articles.each do |article| %>
+      <li>
+        <h2><%= link_to article.title, article_path(article) %></h2>
+        <p><%= article.author %></p>
+        <p><%= article. %></p>
+        <p><%= article.created_at.to_date %></p>
+      </li>
+    <% end %>
+  <% else %>
+    <p>No articles found.</p>
+  <% end %>
+</ul>
+
