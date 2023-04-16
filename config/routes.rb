@@ -6,5 +6,7 @@ Rails.application.routes.draw do
   get "/signup", to: "user#new", as: "signup"
   post "/users", to: "user#create", as: "users"
 
+  post "/comment", to:"comment#create"
+
   resources :users
 end
